@@ -14,3 +14,11 @@ server.listen(port, (err) => {
 
     console.log(`Server is listening on ${port}`);
 });
+
+const fs = require('fs');
+
+fs.writeFile('hello-world.txt', 'Hello to this great world', 'utf8', (err) => {
+    if (err) throw err;
+
+    console.log('Success');
+});
